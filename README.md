@@ -1,2 +1,5 @@
-# shakyanandk.github.io
-Github Page
+# portfolio
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
