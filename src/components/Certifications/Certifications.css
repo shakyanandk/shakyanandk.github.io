@@ -1,0 +1,26 @@
+.certifications__grid {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(18em, 1fr));
+    grid-gap: 2em;
+}
+
+.certificate {
+    padding: 2em;
+    margin: 0 auto;
+    text-align: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s linear;
+    width: 300px;
+    border-radius: 10px;
+
+}
+
+.certificate:hover {
+    transform: translateY(-7px);
+}
+
+.certificate__description {
+    margin-top: 1em;
+}

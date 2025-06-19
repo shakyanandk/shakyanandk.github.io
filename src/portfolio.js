@@ -1,13 +1,13 @@
 const header = {
-  homepage: 'https://shakyanandk.github.io/portfolio',
+  homepage: 'https://shakyanandk.github.io',
   title: 'SK.',
 }
 
 const about = {
   name: 'Shakyanand Kamble',
-  role: 'React JS Developer',
+  role: 'Senior Software Developer',
   description:
-    'Senior Consultant with 8 years of experience in Consumer and Core Banking Product Development Cross-Border Payments, and the SCM domain. Proven ability to deliver complex solutions with a strong commitment to quality, adaptability, and results-driven execution',
+    'Experienced Full Stack Developer with 8 years of professional experience in developing diverse applications, ranging from consumer banking applications to core banking platforms. Possesses a comprehensive background in Supply Chain Management. Demonstrates proficiency in managing complex projects and consistently fulfills obligations.',
   resume: 'https://drive.google.com/file/d/1e0_K5Lob73l82XuAkhZ0Mm7SOFq7t0Mp/view?usp=sharing',
   social: {
     linkedin: 'https://www.linkedin.com/in/shakyanand-kamble-63b01593/',
@@ -32,24 +32,60 @@ const projects = [
   },
 ]
 
+const certifications = [
+  {
+    name: 'AWS Certified Solutions Architect – Associate',
+    issuer: 'Amazon Web Services Training and Certification',
+    link: 'https://www.credly.com/badges/ada38385-9a50-48d0-9b73-b202df7ba3da/linked_in_profile'
+  },
+  {
+    name: 'AWS Certified Cloud Practitioner',
+    issuer: 'Amazon Web Services Training and Certification',
+    link: 'https://www.credly.com/badges/75f2fb05-9b12-47ed-a37d-694dde25ca5c/linked_in_profile'
+  },
+  {
+    name: 'Oracle Cloud Infrastructure Foundations 2020 Certified Associate',
+    issuer: 'Oracle',
+    link: 'https://www.youracclaim.com/badges/3e756bee-22b0-4e65-b879-cd5fd740bee1?source=linked_in_profile'
+  },
+  {
+    name: 'Javascript',
+    issuer: 'HackerRank',
+    link: 'https://www.hackerrank.com/certificates/08a4d8bb640b'
+  },
+  {
+    name: 'React',
+    issuer: 'HackerRank',
+    link: 'https://www.hackerrank.com/certificates/f7c3905e1069'
+  },
+  {
+    name: 'Flutter',
+    issuer: 'Udemy',
+    link: 'http://ude.my/UC-e4aba48d-e41e-4545-81ae-8df71dfa853f'
+  }
+
+]
+
 const skills = [
-  'HTML',
-  'CSS',
-  'JavaScript',
-  'TypeScript',
   'React',
   'Redux',
-  'Git',
-  'CI/CD',
+  'JavaScript',
+  'TypeScript',
   'Jest',
-  'Oracle',
+  'Enzyme',
+  'HTML',
+  'CSS',
   'Java',
   'PL/SQL',
-  'React Native'
+  'Oracle',
+  'React Native',
+  'ASP.NET',
+  'Git',
+  'CI/CD',
 ]
 
 const contact = {
   email: 'shakyanandkamble@gmail.com',
 }
 
-export { header, about, projects, skills, contact }
+export { header, about, projects, skills, contact, certifications }
