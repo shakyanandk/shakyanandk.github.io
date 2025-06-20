@@ -7,7 +7,7 @@ const about = {
   name: 'Shakyanand Kamble',
   role: 'Senior Software Developer',
   description:
-    'Experienced Full Stack Developer with 8 years of professional experience in developing diverse applications, ranging from consumer banking applications to core banking platforms. Possesses a comprehensive background in Supply Chain Management. Demonstrates proficiency in managing complex projects and consistently fulfills obligations.',
+    'Senior Software Developer with 8 years of experience delivering applications across consumer and core banking domains, with additional expertise in Supply Chain Management. Skilled in managing complex projects and consistently meeting commitments',
   resume: 'https://drive.google.com/file/d/1e0_K5Lob73l82XuAkhZ0Mm7SOFq7t0Mp/view?usp=sharing',
   social: {
     linkedin: 'https://www.linkedin.com/in/shakyanand-kamble-63b01593/',
@@ -24,7 +24,7 @@ const projects = [
     sourceCode: 'https://github.com/shakyanandk/salesproject',
   },
   {
-    name: 'Car Service App',
+    name: 'Vehicle Service App',
     description:
       'Car service app for managing the servicing of the vehicles. This included scanning the VIN of the vehicles and submitting the evidences to the service center for assesment of the repairs',
     stack: ['React Native', 'TypeScript', 'SQLite'],

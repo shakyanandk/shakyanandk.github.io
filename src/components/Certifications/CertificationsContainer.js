@@ -4,7 +4,7 @@ import './Certifications.css'
 const CertificationsContainer = ({ certificate }) => (
     <div className='certificate'>
         <h3>{certificate.name}</h3>
-        <p className='certificate__description'>{certificate.description}</p>
+        <p className='certificate__issuer'>{certificate.issuer}</p>
         {certificate.link && (
             <a
                 href={certificate.link}
