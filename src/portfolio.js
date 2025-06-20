@@ -7,7 +7,7 @@ const about = {
   name: 'Shakyanand Kamble',
   role: 'Senior Software Developer',
   description:
-    'Senior Software Developer with 8 years of experience delivering applications across consumer and core banking domains, with additional expertise in Supply Chain Management. Skilled in managing complex projects and consistently meeting commitments',
+    'Experienced software engineer with 8 years of delivering enterprise-grade applications across consumer and core banking domains, with additional expertise in Supply Chain Management. Proven track record in driving complex projects to successful completion while ensuring business objectives are met.',
   resume: 'https://drive.google.com/file/d/1e0_K5Lob73l82XuAkhZ0Mm7SOFq7t0Mp/view?usp=sharing',
   social: {
     linkedin: 'https://www.linkedin.com/in/shakyanand-kamble-63b01593/',
