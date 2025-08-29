@@ -132,7 +132,7 @@ const experience = [
     achievements: [
       'Developed and maintained 20+ modular, reusable React JS components using TypeScript, improving developer productivity by 30%',
       'Optimized front-end performance, reducing initial page load time by 25%',
-      'Integrated secure RESTful APIs with the ASP.NET backend, enhancing transaction speed and reliability for 50K+ active users',
+      'Integrated secure RESTful APIs with the ASP.NET backend, enhancing transaction speed and reliability for multiple active users',
       'Collaborated with cross-functional teams using JIRA to design, track, and deliver new product features within Agile sprints'
     ]
   },
