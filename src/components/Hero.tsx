@@ -16,12 +16,12 @@ const Hero = () => {
       {/* Enhanced background with animated elements */}
       <div className="absolute inset-0">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml,%3Csvg%20width%3D%2260%22%20height%3D%2260%22%20viewBox%3D%220%200%2060%2060%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%3Cg%20fill%3D%22%23000%22%20fill-opacity%3D%220.02%22%3E%3Ccircle%20cx%3D%2230%22%20cy%3D%2230%22%20r%3D%221%22/%3E%3C/g%3E%3C/g%3E%3C/svg%3E')] opacity-50"></div>
-        
+
         {/* Animated gradient orbs specific to hero */}
         <div className="absolute top-1/4 right-1/4 w-72 h-72 bg-gradient-to-r from-primary/10 to-accent/10 rounded-full blur-3xl animate-pulse opacity-60"></div>
         <div className="absolute bottom-1/4 left-1/4 w-96 h-96 bg-gradient-to-l from-accent/8 to-primary/8 rounded-full blur-3xl animate-pulse opacity-40 animation-delay-2000"></div>
       </div>
-      
+
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <div className="animate-fade-in">
           <div className="mb-8">
@@ -61,7 +61,7 @@ const Hero = () => {
               <Mail className="mr-2" size={18} />
               Get In Touch
             </Button>
-            
+
             <Button
               variant="outline"
               size="lg"
@@ -95,7 +95,7 @@ const Hero = () => {
                 <Github size={24} />
               </a>
             </Button>
-            
+
             <Button
               variant="ghost"
               size="lg"
@@ -116,11 +116,12 @@ const Hero = () => {
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+      <div className="flex justify-center absolute bottom-8 w-full animate-bounce">
         <div className="w-6 h-10 border-2 border-primary/30 rounded-full flex justify-center">
           <div className="w-1 h-3 bg-primary rounded-full mt-2 animate-pulse"></div>
         </div>
       </div>
+
     </section>
   );
 };
