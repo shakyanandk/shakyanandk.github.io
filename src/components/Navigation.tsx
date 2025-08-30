@@ -28,9 +28,9 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'bg-card-glass backdrop-blur-md shadow-glass border-b border-border/20'
+          ? 'bg-card-glass/80 backdrop-blur-xl backdrop-saturate-150 shadow-glass border-b border-border/10'
           : 'bg-transparent'
       }`}
     >
@@ -75,7 +75,7 @@ const Navigation = () => {
         {/* Mobile Navigation Menu */}
         {isOpen && (
           <div className="md:hidden">
-            <div className="px-2 pt-2 pb-3 space-y-1 bg-card-glass backdrop-blur-md rounded-lg mt-2 shadow-glass border border-border/20">
+            <div className="px-2 pt-2 pb-3 space-y-1 bg-card-glass/90 backdrop-blur-xl backdrop-saturate-150 rounded-lg mt-2 shadow-glass border border-border/10">
               {navItems.map((item) => (
                 <button
                   key={item.href}
