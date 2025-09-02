@@ -1,5 +1,3 @@
 # portfolio
-
-## License
-
-[MIT](https://choosealicense.com/licenses/mit/)
+# Shakyanand Kamble
+My personal portfolio website: [shakyanandk.github.io](https://shakyanandk.github.io/)
