@@ -7,10 +7,10 @@ const about = {
   name: "Shakyanand Kamble",
   role: "Senior Software Developer",
   description:
-    "Experienced software engineer with {highlight:8 years} of delivering enterprise-grade applications across consumer and core banking domains, with additional expertise in Supply Chain Management. Proven track record in driving complex projects to successful completion while ensuring business objectives are met.",
+    "Experienced software engineer with {highlight:8+ years} of delivering enterprise-grade applications across consumer and core banking domains, with additional expertise in Supply Chain Management. Proven track record in driving complex projects to successful completion while ensuring business objectives are met.",
   location: "Available for Remote & On-site Opportunities",
   resume:
-    "https://drive.google.com/file/d/1-xpEYbi_2ujnc3S6VoRuKVSUbecYnxE-/view?usp=drive_link",
+    "https://drive.google.com/file/d/1LafC15yLrz4Ed2x9O722qah4QL7D2Y1K/view?usp=sharing",
   social: {
     linkedin: "https://www.linkedin.com/in/shakyanand-kamble-63b01593/",
     github: "https://github.com/shakyanandk",
@@ -101,8 +101,9 @@ const skillCategories = [
       "Redux",
       "Angular",
       "Vue",
-      "HTML",
-      "CSS",
+      "Next.js",
+      "Tailwind CSS",
+      "WordPress",
     ],
     color: "from-blue-500 to-purple-600",
   },
@@ -122,9 +123,11 @@ const skillCategories = [
       "Jest",
       "Enzyme",
       "Vitest",
+      "Playwright",
       "Karma",
       "Git",
       "CI/CD",
+      "Sentry",
       "Agile Methodology",
     ],
     color: "from-orange-500 to-red-600",
@@ -135,8 +138,8 @@ const skillCategories = [
     color: "from-purple-500 to-pink-600",
   },
   {
-    title: "AI Tools",
-    skills: ["ChatGPT", "Copilot", "Claude"],
+    title: "AI Tools & Analytics",
+    skills: ["ChatGPT", "Copilot", "Claude", "Adobe Target", "Speedcurve"],
     color: "from-orange-500 to-red-600",
   },
 ];
@@ -147,12 +150,15 @@ const experience = [
     company: "ThinkNext Software Solutions",
     duration: "June 2025 - Present",
     description:
-      "Developing scalable front-end applications for a dynamic e-commerce platform, focusing on performance, accessibility, and seamless integration with ASP.NET backend.",
+      "Developing scalable front-end applications for a dynamic insurance marketplace platform, focusing on performance, accessibility, and seamless integration with a microservices-based backend.",
     achievements: [
-      "Developed and maintained 20+ modular, reusable Vue JS components using TypeScript, improving developer productivity by 30%",
-      "Optimized front-end performance, reducing initial page load time by 25%",
-      "Integrated secure RESTful APIs with the ASP.NET backend, enhancing transaction speed and reliability for multiple active users",
-      "Collaborated with cross-functional teams using JIRA to design, track, and deliver new product features within Agile sprints",
+      "Working as an UI engineer for a leading health insurance marketplace provider.",
+      "Developed and maintained modular, reusable Next.js, React and Vue components using TypeScript for a dynamic health insurance web application.",
+      "Exposure to WordPress to manage content required for the application.",
+      "Used Tailwind CSS to keep the styling consistent across the applications",
+      "Utilized redux to manage state efficiently, ensuring performance and accessibility compliance.",
+      "Collaborated with cross-functional teams using JIRA to design, track, and implement new product features.",
+      "Optimized front-end performance and integrated secure RESTful APIs to deliver a seamless, efficient user experience.",
     ],
   },
   {
