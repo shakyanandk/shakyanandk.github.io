@@ -2,7 +2,6 @@ import { Github, Linkedin, FileText, Mail, MapPin } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { about, header } from '@/data/content';
 import { formatHighlightedText } from '@/lib/text-utils';
-import { AvatarImage } from './ui/avatar';
 
 const Hero = () => {
   const scrollToSection = (href: string) => {
@@ -28,7 +27,7 @@ const Hero = () => {
           <div className="mb-8">
             <div className="w-32 h-32 mx-auto mb-6 rounded-full bg-gradient-primary p-1 animate-float">
               <img
-                src="/profile-image.png"
+                src="/profile-image.avif"
                 alt="Profile"
                 className="w-full h-full rounded-full object-cover"
               />
