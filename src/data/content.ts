@@ -168,11 +168,11 @@ const experience = [
     description:
       "Delivered high-impact full-stack and UI development solutions for cross-border payments, banking, and manufacturing clients in Agile environments.",
     achievements: [
-      "Built a payment remediation tool using Vue JS and Pinia, improving payment partner efficiency by 20% for B2B portal users",
+      "Built a payment remediation tool using React JS and Redux, improving payment partner efficiency by 20% for B2B portal users",
       "Developed Oracle PL/SQL procedures supporting BY SCM software, reducing data processing latency by 35%",
-      "Built Vue JS dashboards for SCM and order tracking, increasing operational visibility across 10+ business units",
-      "Enhanced net banking applications for a U.S. investment bank, improving onboarding completion rate by 15% through optimized workflows",
-      "Worked across diverse stacks including Vue JS, React JS, Angular JS, TypeScript, Next.js, GraphQL, Java Spring Boot, and ASP.NET",
+      "Built React JS dashboards for SCM and order tracking, increasing operational visibility across 10+ business units",
+      "Enhanced net banking applications for a US investment bank, improving onboarding completion rate by 15% through optimized workflows",
+      "Worked across diverse stacks including React JS, Vue JS, Angular JS, TypeScript, Next.js, GraphQL, Java, Spring Boot, and ASP.NET",
     ],
   },
   {

@@ -6,14 +6,12 @@ import Experience from '@/components/Experience';
 import InteractiveDemo from '@/components/InteractiveDemo';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
-import AnimatedBackground from '@/components/AnimatedBackground';
 import ParallaxElements from '@/components/ParallaxElements';
 import ScrollToTop from '@/components/ScrollToTop';
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background relative overflow-hidden">
-      <AnimatedBackground />
       <ParallaxElements />
       <div className="relative z-10">
         <Navigation />

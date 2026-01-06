@@ -33,7 +33,7 @@ export const useThemeColors = () => {
     setMounted(true);
     // Apply theme immediately on mount to prevent flash
     applyTheme(currentTheme, isDark);
-  }, []);
+  }, [currentTheme, isDark]);
 
   // Apply theme whenever it changes or dark mode toggles (skip first render since we handle it above)
   useEffect(() => {

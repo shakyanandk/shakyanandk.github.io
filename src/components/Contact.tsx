@@ -2,6 +2,7 @@ import { Mail, Linkedin, Github, MapPin, Phone } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { contact, sections, about } from '@/data/content';
+import ScrambledEmail from '@/components/ScrambledEmail';
 
 const Contact = () => {
   const contactMethods = [
@@ -10,7 +11,8 @@ const Contact = () => {
       label: 'Email',
       value: contact.email,
       href: `mailto:${contact.email}`,
-      description: 'Best way to reach me'
+      description: 'Best way to reach me',
+      useScrambled: true
     },
     {
       icon: Linkedin,
@@ -56,20 +58,29 @@ const Contact = () => {
                     {method.label}
                   </h3>
                   <p className="text-sm text-foreground/60 mb-3">{method.description}</p>
-                  <Button
-                    variant="outline"
-                    size="sm"
-                    className="hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
-                    asChild
-                  >
-                    <a
-                      href={method.href}
-                      target={method.href.startsWith('mailto:') ? '_self' : '_blank'}
-                      rel="noopener noreferrer"
+                  {method.useScrambled ? (
+                    <ScrambledEmail
+                      email={contact.email}
+                      asButton
+                      showIcon={false}
+                      className="inline-flex items-center justify-center h-9 px-4 py-2 text-sm font-medium rounded-md border border-input bg-background hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
+                    />
+                  ) : (
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="hover:bg-primary hover:text-primary-foreground transition-colors duration-200"
+                      asChild
                     >
-                      {method.value}
-                    </a>
-                  </Button>
+                      <a
+                        href={method.href}
+                        target={method.href.startsWith('mailto:') ? '_self' : '_blank'}
+                        rel="noopener noreferrer"
+                      >
+                        {method.value}
+                      </a>
+                    </Button>
+                  )}
                 </CardContent>
               </Card>
             );
