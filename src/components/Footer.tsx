@@ -1,5 +1,6 @@
 import { Github, Linkedin, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import ThemeRandomizer from '@/components/ThemeRandomizer';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -21,6 +22,10 @@ const Footer = () => {
           </div>
 
           <div className="flex items-center gap-4">
+            <ThemeRandomizer />
+            
+            <div className="h-5 w-px bg-border/40" />
+            
             <Button
               variant="ghost"
               size="sm"

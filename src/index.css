@@ -159,6 +159,25 @@ All colors MUST be HSL.
   html {
     scroll-behavior: smooth;
   }
+  
+  /* Smooth transitions ONLY when randomizing theme colors */
+  html.theme-transitioning,
+  html.theme-transitioning * {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+  
+  /* Disable transitions for users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    html.theme-transitioning,
+    html.theme-transitioning * {
+      transition: none !important;
+    }
+    * {
+      animation: none !important;
+    }
+  }
 
   /* Custom scrollbar */
   ::-webkit-scrollbar {
