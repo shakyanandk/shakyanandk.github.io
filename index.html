@@ -4,277 +4,291 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta http-equiv="refresh" content="4;url=https://shakyanandkamble.com" />
-  <title>Redirecting… | Anand Kamble</title>
+  <title>Redirecting… | Shakyanand Kamble</title>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    :root {
+      --bg: #eef2ff;
+      --text: #161a26;
+      --muted: #3f4860;
+      --a: #ff6f59;
+      --b: #ffb85e;
+      --c: #4f96ff;
+      --line-bg: rgba(22, 26, 38, 0.28);
+      --line-glow: rgba(79, 150, 255, 0.55);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
     html, body {
-      height: 100%;
-      background: #0A0A14;
-      color: #fff;
-      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
-      overflow: hidden;
+      min-height: 100%;
     }
 
-    /* ── Gradient background layer ── */
-    #bg-layer {
+    body {
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      overflow: hidden;
+      position: relative;
+    }
+
+    #aurora {
+      position: fixed;
+      left: 50%;
+      top: -40rem;
+      width: min(180rem, 200vw);
+      transform: translateX(-50%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    #aurora path {
+      transform-origin: center top;
+      animation: aurora-pulse 10s ease-in-out infinite alternate;
+    }
+
+    @keyframes aurora-pulse {
+      0% {
+        opacity: 0.8;
+        transform: translateY(0) scale(1);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(18px) scale(1.025);
+      }
+    }
+
+    #noise {
       position: fixed;
       inset: 0;
-      z-index: 0;
-      display: flex;
-      align-items: flex-end;
-      justify-content: center;
       pointer-events: none;
+      z-index: 0;
+      opacity: 0.035;
+      background-image: radial-gradient(circle at 20% 20%, #000 0.6px, transparent 0.7px);
+      background-size: 4px 4px;
     }
 
-    #bg-layer svg {
-      width: 140vw;
-      max-width: 1400px;
-      height: auto;
-      animation: glow-drift 8s ease-in-out infinite alternate;
-      transform-origin: center bottom;
-    }
-
-    @keyframes glow-drift {
-      0%   { opacity: 0.7; transform: translateY(0px)   hue-rotate(-15deg); }
-      100% { opacity: 1.0; transform: translateY(-20px) hue-rotate(15deg);  }
-    }
-
-    /* ── Page content ── */
     #scene {
       position: relative;
       z-index: 1;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      min-height: 100vh;
+      display: grid;
+      place-items: center;
       padding: 1.5rem;
-      animation: fade-in 0.9s ease both;
+      text-align: center;
     }
 
-    @keyframes fade-in {
-      from { opacity: 0; transform: translateY(16px); }
-      to   { opacity: 1; transform: translateY(0);    }
+    .stack {
+      width: min(48rem, 100%);
+      display: grid;
+      justify-items: center;
+      gap: 1rem;
+      animation: rise 0.8s ease both;
     }
 
-    /* ── Monogram ── */
-    #monogram {
-      font-size: 1.4rem;
-      font-weight: 800;
-      letter-spacing: 0.06em;
-      background: linear-gradient(135deg, #F9730C 0%, #FFB053 45%, #A5BBFC 100%);
+    @keyframes rise {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    #beacon {
+      width: 6.2rem;
+      aspect-ratio: 1 / 1;
+      border-radius: 999px;
+      display: grid;
+      place-items: center;
+      position: relative;
+      background: linear-gradient(130deg, rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.55));
+      border: 1px solid rgba(22, 26, 38, 0.08);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    #beacon::before,
+    #beacon::after {
+      content: "";
+      position: absolute;
+      inset: -0.55rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      animation: ping 2.7s ease-out infinite;
+    }
+
+    #beacon::after {
+      animation-delay: 1.35s;
+    }
+
+    @keyframes ping {
+      from {
+        opacity: 0.6;
+        transform: scale(1);
+      }
+      to {
+        opacity: 0;
+        transform: scale(1.35);
+      }
+    }
+
+    #count {
+      font-size: 2rem;
+      font-weight: 750;
+      letter-spacing: -0.03em;
+      background: linear-gradient(135deg, var(--a), var(--b), var(--c));
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      margin-bottom: 1.8rem;
-      user-select: none;
     }
 
-    /* ── Card ── */
-    #card {
-      background: rgba(255, 255, 255, 0.05);
-      backdrop-filter: blur(20px);
-      -webkit-backdrop-filter: blur(20px);
-      border: 1px solid rgba(255, 255, 255, 0.10);
-      border-radius: 20px;
-      padding: 2.8rem 3rem;
-      max-width: 480px;
-      width: 100%;
-      text-align: center;
-      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
+    h1 {
+      font-size: clamp(1.2rem, 3vw, 1.9rem);
+      letter-spacing: -0.01em;
+      font-weight: 680;
     }
 
-    /* ── SVG countdown ring ── */
-    #ring-wrap {
+    p {
+      font-size: clamp(0.95rem, 1.7vw, 1.05rem);
+      color: var(--muted);
+      max-width: 38ch;
+      line-height: 1.5;
+    }
+
+    #line {
+      width: min(36rem, 88vw);
+      height: 0.52rem;
+      border-radius: 999px;
+      background: var(--line-bg);
+      overflow: hidden;
       position: relative;
-      width: 96px;
-      height: 96px;
-      margin: 0 auto 2rem;
     }
 
-    #ring-wrap svg {
-      transform: rotate(-90deg);
+    #line-fill {
+      width: 100%;
+      height: 100%;
+      transform-origin: left center;
+      transform: scaleX(0);
+      background: linear-gradient(90deg, var(--a), var(--b), var(--c));
+      box-shadow: 0 0 22px var(--line-glow);
     }
 
-    #ring-track {
-      fill: none;
-      stroke: rgba(255, 255, 255, 0.08);
-      stroke-width: 5;
-    }
-
-    #ring-progress {
-      fill: none;
-      stroke: url(#ringGrad);
-      stroke-width: 5;
-      stroke-linecap: round;
-      stroke-dasharray: 263.89; /* 2π × 42 */
-      stroke-dashoffset: 0;
-      transition: stroke-dashoffset 0.9s linear;
-    }
-
-    #ring-number {
-      position: absolute;
-      inset: 0;
-      display: flex;
+    #cta {
+      display: inline-flex;
       align-items: center;
       justify-content: center;
-      font-size: 2rem;
-      font-weight: 700;
-      background: linear-gradient(135deg, #F9730C, #FFB053);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-    }
-
-    /* ── Heading (typewriter) ── */
-    #heading {
-      font-size: clamp(1.1rem, 3.5vw, 1.35rem);
-      font-weight: 600;
-      line-height: 1.4;
-      margin-bottom: 0.6rem;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: 2px solid rgba(255, 255, 255, 0.6);
-      width: 0;
-      animation:
-        typewriter 1.4s steps(35, end) 0.4s forwards,
-        blink-cursor 0.75s step-end 0.4s 4;
-    }
-
-    @keyframes typewriter {
-      to { width: 100%; }
-    }
-
-    @keyframes blink-cursor {
-      50% { border-color: transparent; }
-    }
-
-    #subtext {
-      font-size: 0.88rem;
-      color: rgba(255, 255, 255, 0.55);
-      margin-bottom: 1.8rem;
-    }
-
-    /* ── CTA button ── */
-    #cta {
-      display: inline-block;
       text-decoration: none;
-      color: #fff;
+      color: #ffffff;
       font-size: 0.92rem;
-      font-weight: 600;
-      padding: 0.65rem 1.6rem;
-      border-radius: 50px;
-      background: linear-gradient(135deg, #F9730C 0%, #FFB053 100%);
-      box-shadow: 0 0 18px rgba(249, 115, 12, 0.45);
-      transition: box-shadow 0.25s ease, transform 0.2s ease;
+      font-weight: 670;
+      border-radius: 999px;
+      padding: 0.62rem 1.25rem;
+      background: linear-gradient(130deg, #1b2131, #3a4566);
+      box-shadow: 0 0 26px rgba(27, 33, 49, 0.34);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
     }
 
-    #cta:hover, #cta:focus {
-      box-shadow: 0 0 30px rgba(249, 115, 12, 0.7);
+    #cta:hover,
+    #cta:focus-visible {
       transform: translateY(-2px);
+      box-shadow: 0 0 34px rgba(27, 33, 49, 0.48);
       outline: none;
     }
 
-    /* ── Fade-out before redirect ── */
     body.leaving {
-      animation: fade-out 0.5s ease forwards;
+      animation: fade-out 0.45s ease forwards;
     }
 
     @keyframes fade-out {
-      to { opacity: 0; }
-    }
-
-    @media (max-width: 480px) {
-      #card { padding: 2rem 1.5rem; }
-      #heading { font-size: 1rem; }
+      to {
+        opacity: 0;
+      }
     }
   </style>
 </head>
 <body>
+  <svg id="aurora" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 3244 1744" fill="none" aria-hidden="true" preserveAspectRatio="xMidYMin meet">
+    <g filter="url(#auroraBlur)">
+      <path d="M3122 122.003C3122 519.828 2963.97 901.359 2682.66 1182.66C2401.36 1463.97 2019.83 1622 1622 1622C1224.18 1622 842.648 1463.97 561.344 1182.66C280.039 901.359 122.004 519.828 122.004 122.003L3122 122.003Z" fill="url(#auroraGradient)" />
+    </g>
+    <defs>
+      <filter id="auroraBlur" x="0.001" y="-0.001" width="3244.01" height="1744.01" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+        <feFlood flood-opacity="0" result="BackgroundImageFix" />
+        <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+        <feGaussianBlur stdDeviation="61" result="effect1_foregroundBlur" />
+      </filter>
+      <radialGradient id="auroraGradient" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1622 122.003) rotate(-90) scale(1500)">
+        <stop offset="0.73" stop-color="#FF8B77" />
+        <stop offset="0.79" stop-color="#FFD089" />
+        <stop offset="0.84" stop-color="#94C4FF" />
+        <stop offset="1" stop-color="#EEF2FF" />
+      </radialGradient>
+    </defs>
+  </svg>
 
-  <!-- Animated gradient aurora layer -->
-  <div id="bg-layer" aria-hidden="true">
-    <svg viewBox="0 0 1200 520" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax meet">
-      <defs>
-        <radialGradient id="aurora" cx="50%" cy="100%" r="70%" fx="50%" fy="100%">
-          <stop offset="0%"   stop-color="#F9730C" stop-opacity="0.90" />
-          <stop offset="28%"  stop-color="#FFB053" stop-opacity="0.70" />
-          <stop offset="62%"  stop-color="#A5BBFC" stop-opacity="0.45" />
-          <stop offset="100%" stop-color="#F4F7FF" stop-opacity="0.00" />
-        </radialGradient>
-        <filter id="soft-blur" x="-30%" y="-30%" width="160%" height="160%">
-          <feGaussianBlur stdDeviation="28" />
-        </filter>
-      </defs>
-      <ellipse
-        cx="600" cy="560"
-        rx="700" ry="380"
-        fill="url(#aurora)"
-        filter="url(#soft-blur)"
-      />
-    </svg>
-  </div>
+  <div id="noise" aria-hidden="true"></div>
 
-  <!-- Main scene -->
-  <main id="scene">
-    <div id="monogram" aria-label="Anand Kamble">AK</div>
-
-    <div id="card" role="status" aria-live="polite">
-
-      <!-- SVG countdown ring -->
-      <div id="ring-wrap" aria-hidden="true">
-        <svg width="96" height="96" viewBox="0 0 96 96">
-          <defs>
-            <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop offset="0%"   stop-color="#F9730C" />
-              <stop offset="100%" stop-color="#FFB053" />
-            </linearGradient>
-          </defs>
-          <circle id="ring-track"    cx="48" cy="48" r="42" />
-          <circle id="ring-progress" cx="48" cy="48" r="42" />
-        </svg>
-        <div id="ring-number">4</div>
+  <main id="scene" role="status" aria-live="polite" aria-atomic="true">
+    <section class="stack">
+      <div id="beacon" aria-hidden="true">
+        <span id="count">4</span>
       </div>
-
-      <p id="heading">Redirecting you to my portfolio...</p>
-      <p id="subtext">You're being taken to shakyanandkamble.com</p>
-      <a id="cta" href="https://shakyanandkamble.com">Take me there now →</a>
-    </div>
+      <h1>Taking you to my portfolio</h1>
+      <p>Quick stop here while the new domain loads. Redirect starts automatically.</p>
+      <div id="line" aria-hidden="true">
+        <div id="line-fill"></div>
+      </div>
+      <a id="cta" href="https://shakyanandkamble.com">Open now</a>
+    </section>
   </main>
 
   <script>
     (function () {
-      var TOTAL      = 4;       // seconds
-      var CIRCUMFERENCE = 263.89; // 2π × 42
-      var progress   = document.getElementById('ring-progress');
-      var number     = document.getElementById('ring-number');
-      var remaining  = TOTAL;
+      var TARGET_URL = 'https://shakyanandkamble.com';
+      var TOTAL = 4;
+      var count = document.getElementById('count');
+      var lineFill = document.getElementById('line-fill');
+      var startTime = Date.now();
+      var redirected = false;
 
-      /* Initialise dash */
-      progress.style.strokeDashoffset = '0';
-
-      function tick () {
-        remaining -= 1;
-        /* Update ring */
-        var elapsed  = TOTAL - remaining;
-        var offset   = CIRCUMFERENCE * (elapsed / TOTAL);
-        progress.style.strokeDashoffset = offset;
-        /* Update number */
-        number.textContent = remaining > 0 ? remaining : '0';
-
-        if (remaining <= 0) {
-          document.body.classList.add('leaving');
-          setTimeout(function () {
-            window.location.href = 'https://shakyanandkamble.com';
-          }, 450);
+      function goToTarget() {
+        if (redirected) {
+          return;
         }
+        redirected = true;
+        document.body.classList.add('leaving');
+        setTimeout(function () {
+          window.location.href = TARGET_URL;
+        }, 430);
       }
 
-      var timer = setInterval(function () {
-        tick();
-        if (remaining <= 0) clearInterval(timer);
-      }, 1000);
+      function animate() {
+        var elapsed = (Date.now() - startTime) / 1000;
+        if (elapsed > TOTAL) {
+          elapsed = TOTAL;
+        }
+
+        var progress = elapsed / TOTAL;
+        var remaining = Math.max(0, Math.ceil(TOTAL - elapsed));
+
+        lineFill.style.transform = 'scaleX(' + progress + ')';
+        count.textContent = String(remaining);
+
+        if (elapsed >= TOTAL) {
+          goToTarget();
+          return;
+        }
+
+        window.requestAnimationFrame(animate);
+      }
+
+      window.requestAnimationFrame(animate);
     }());
   </script>
 </body>
